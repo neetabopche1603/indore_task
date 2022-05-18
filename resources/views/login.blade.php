@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>
-    </title>
+    <title>Login | User</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,14 +43,14 @@
       <div class="row">
         <div class="col-12">
           <div class="form-group">
-            <label for=""><b>username</b></label>
+            <label for=""><b>Username :</b></label>
             <input type="text" name="email" id="" class="form-control" placeholder="Enter Username" aria-describedby="helpId">
           </div>
         </div>
         <div class="col-12">
           <div class="form-group">
-            <label for=""><b>Password</b></label>
-            <input type="text" name="password" id="" class="form-control" placeholder="Enter Password" aria-describedby="helpId">
+            <label for=""><b>Password :</b></label>
+            <input type="password" name="password" id="" class="form-control" placeholder="Enter Password" aria-describedby="helpId">
           </div>
         </div>
         <div class="col-2">
