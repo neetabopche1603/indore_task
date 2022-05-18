@@ -20,9 +20,19 @@ Route::get('/', function () {
 });
 
 // Login Route
-Route::get('login',[LoginController::class,'__index'])->name('login');
-Route::post('login',[LoginController::class,'__login'])->name('login.post');
+Route::get('login', [LoginController::class, '__index'])->name('login');
+Route::post('login', [LoginController::class, '__login'])->name('login.post');
 
-Route::get('register',[RegisterController::class,'__index'])->name('register');
-Route::post('register-success',[RegisterController::class,'__store'])->name('register.post');
-Route::get('dashboard',[RegisterController::class,'__dashboard'])->name('dashboard');
+// Registration Route
+Route::get('register', [RegisterController::class, '__index'])->name('register');
+Route::post('register-success', [RegisterController::class, '__store'])->name('register.post');
+
+// Dashboard Route
+Route::get('dashboard', [RegisterController::class, '__dashboard'])->name('dashboard');
+
+// Logout Route
+Route::get('logout', function () {
+    session()->flush();
+    auth()->logout();
+    return redirect()->route('login');
+});

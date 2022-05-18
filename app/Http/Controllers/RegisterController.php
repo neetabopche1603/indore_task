@@ -17,8 +17,13 @@ class RegisterController extends Controller
 
     public function __dashboard()
     {
-        $earning = wallet::where('user_id',Auth()->user()->id)->select('amount')->first();
-        return view('dashboard',compact('earning'));
+        if(Auth()->user()){
+            $earning = wallet::where('user_id',Auth()->user()->id)->select('amount')->first();
+            return view('dashboard',compact('earning'));
+        }else{
+            return redirect()->route('login');
+        }
+        
     }
 
     public function __store(Request $request)

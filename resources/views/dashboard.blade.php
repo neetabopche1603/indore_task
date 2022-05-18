@@ -20,6 +20,7 @@
     <div class="container mt-4">
         <h1>Hi <span class="text-primary text-center">{{Auth()->user()->name}}</span> Dashboard</h1>
 
+
         <div class="row">
             <div class="col-md-4 col-sm-6 col-lg-3">
                 <div class="card">
@@ -29,6 +30,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="btn">
+            <a href="{{url('logout')}}" class="btn btn-danger">Logout</a>
         </div>
     </div>
 
